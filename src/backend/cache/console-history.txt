@@ -1,0 +1,61 @@
+await contracts.makeItem(ethers.utils.getRandomNumber(1000), 1);
+await contract.makeItem(ethers.utils.getRandomNumber(1000), 1);
+await contracts.makeItem(ethers.utils.getRandomNumber(1000), 1);
+const contracts = await ethers.getContractAt("Marketplace", "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9")
+await contracts.name()
+await contracts.tokenCount()
+await contracts.tokenCount
+const contracts = await ethers.getContractAt("NFT", "0x5FbDB2315678afecb367f032d93F642f64180aa3")
+await contractss.tokenCount()
+await contractss.tokenCount
+contractss.tokenURI()
+contractss.tokenURI
+contractss.tokenCount
+contractss.tokenCount()
+contractss
+const contractss = await ethers.getContractAt("NFT", "0x5FbDB2315678afecb367f032d93F642f64180aa3")
+const contracts = await ethers.getContractAt("NFT", "0x5FbDB2315678afecb367f032d93F642f64180aa3")
+const contracts = await getContractAt("NFT", "0x5FbDB2315678afecb367f032d93F642f64180aa3")
+const contracts = await getContractAt("NFT", 0x5FbDB2315678afecb367f032d93F642f64180aa3")
+const contracts = await getContractAt("NFT", 0x5FbDB2315678afecb367f032d93F642f64180aa3
+const contract = await getContractAt("NFT", 0x5FbDB2315678afecb367f032d93F642f64180aa3)
+const contract = await getContract("NFT", 0x5FbDB2315678afecb367f032d93F642f64180aa3)
+await contract.feeAccount()
+await contract.feePercent()
+await contractnft.feePercent()
+await contractnft.feeAccount
+await contractnft.feeAccount()
+await contractnft.name()
+await contract.name()
+await contract.symbol()
+await contractnft.symbol()
+await contractnft.symbol
+contractnft.symbol()
+contractnft.symbol
+contractnft
+const contractnft = await ethers.getContractAt("NFT", "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9")
+const contract = await ethers.getContractAt("NFT", "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9")
+await contract.name()
+await contract.symbol()
+await contract.feePercent()
+await contract.tokenCount()
+contract
+const contract = await ethers.getContractAt("Marketplace", "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707")
+await contract.symbol()
+await contract.name()
+await contract.tokenCount()
+contract
+const contract = await ethers.getContractAt("NFT", "0x5fbdb2315678afecb367f032d93f642f64180aa3")
+await contract.tokenCount()
+tokc
+const tokc = await contract.tokenCount()
+const tc = await contract.tokenCount()
+const contract = await ethers.getContractAt("NFT", "0x5fbdb2315678afecb367f032d93f642f64180aa3")
+const tc = await contract.tokenCount()
+await contract.tokenCount()
+const tc = await contract.tokenCount()
+const tc = await contract.tokenCount
+contract
+const contract = await ethers.getContractAt("NFT", "0x5fbdb2315678afecb367f032d93f642f64180aa3")
+constract
+const constract = ethers.getContractAt("NFT", "0x5fbdb2315678afecb367f032d93f642f64180aa3")
