@@ -8,6 +8,7 @@ import MarketplaceAddress from '../contractsData/Marketplace-address.json';
 import NFTAbi from '../contractsData/NFT.json';
 import NFTAddress from '../contractsData/NFT-address.json';
 import Navigation from './Navbar';
+import Home from './Home';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -43,7 +44,7 @@ const App = () => {
         <div>
           <Navigation web3Handler={web3Handler} account={account} />
           <Routes>
-            <Route path="/" />
+            <Route path="/" element={<Home marketplace={marketplace} nft={nft} />} />
             <Route path="/create" />
             <Route path="/my-listed-items" />
             <Route path="/my-purchases" />
