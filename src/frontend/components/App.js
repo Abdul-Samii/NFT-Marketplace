@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import './App.css';
 import { ethers } from 'ethers';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
@@ -21,7 +21,7 @@ const App = () => {
     if (window.ethereum) {
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
       setAccount(accounts[0]);
-      if (account) {
+      if (accounts.length > 0) {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         loadContracts(signer);
@@ -32,14 +32,17 @@ const App = () => {
       alert("Please install metamask")
     }
   }
-  
+  useEffect(() => {
+      console.log("lll ", account)
+
+  }, [account])
   const loadContracts = async(signer) => {
     const marketplace = new ethers.Contract(MarketplaceAddress.address, MarketplaceAbi.abi, signer)
     setMarketplace(marketplace);
     const nft = new ethers.Contract(NFTAddress.address, NFTAbi.abi, signer);
     setNFT(nft);
   }
-
+  console.log("------------- ", nft)
     return (
       <BrowserRouter>
         <div>

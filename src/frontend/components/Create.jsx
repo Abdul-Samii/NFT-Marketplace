@@ -4,8 +4,15 @@ import { ethers } from "ethers";
 import { Row, Form, Button } from "react-bootstrap";
 import { create as ipfsHttpClient } from 'ipfs-http-client';
 
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
-
+// const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
+const client = ipfsHttpClient({
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
+  headers: {
+    authorization: `Basic ${Buffer.from(`2QE8N9fErv6xRKKpeQiY3WG1JDx:126c5b8e3c8a63a23144a2e1f9eeb7ca`).toString('base64')}`
+  }
+});
 const Create = ({ marketplace, nft }) => {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState(null)
@@ -15,10 +22,12 @@ const Create = ({ marketplace, nft }) => {
   const uploadToIPFS = async (event) => {
     event.preventDefault();
     const file = event.target.files[0];
+    console.log("------ ", typeof file)
     if (typeof file !== 'undefined') {
+      await client.add(file);
       try {
         const result = await client.add(file);
-        console.log(result);
+        console.log("result - ", result);
         setImage(`https://ipfs.infura.io/ipfs/${result.path}`);
       } catch (error) {
         console.log("IPFS image upload error: ", error);
@@ -27,7 +36,7 @@ const Create = ({ marketplace, nft }) => {
   }
 
   const createNFT = async() => {
-    if (!image || !price || !name || !description) return;
+    if (!image || !price || !name || !description) alert("hi");
     try {
       const result = await client.add(JSON.stringify({ image, name, description }));
       mintThenList(result);
